@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Character Sheet</title>
+        <style type="text/css">
+
+            #characterInfoContainer {
+
+                height: 100px;
+                width: 1200px;
+                margin: 0 auto;
+                background-color:gray;
+
+            }
+
+            .characterTopBar {
+
+                text-align: center;
+                width: 200px;
+                float: left;
+
+            }
+
+            #characterName {
+
+
+            }
+
+            #characterClass {
+
+                margin-top: 17px;
+
+            }
+
+            #characterLevel {
+
+                margin-top: 17px;
+            }
+
+            #characterStatsContainer {
+
+                height: 1000px;
+                width: 170px;
+                Background-color:gray;
+                margin-top: 15px;
+                padding: 5px;
+                float: left;
+
+            }
+
+            .statStyle {
+
+                width: 150px;
+                height: 150px;
+                border: 3px black solid;
+                border-radius: 10%;
+                text-align: center;
+                margin: 9px auto;
+
+            }
+
+            .stat {
+                width: 50px;
+            }
+
+            #characterSkillsContainer {
+                width: 270px;
+                height: 1000px;
+                Background-color: darkgray;
+                margin-top: 15px;
+                Margin-left:15px;
+                float: left;
+
+            }
+
+            #characterProf {
+                width:250px;
+                height: 50px;
+                Background-color:gray;
+                Margin: 10px auto;
+                Float: top;
+                text-align:center;
+                line-height: 50px;
+            }
+
+            #characterSavingThrows {
+                width: 250px;
+                height: 200px;
+                Background-color: gray;
+                Margin: 10px auto;
+                Float: top;
+            }
+
+
+            input {
+
+                border: none;
+                border-bottom: 1px solid #CCC;
+                background-color: transparent;
+                border-color: black;
+
+            }
+
+            select {
+
+                border: none;
+                border-bottom: 1px solid #CCC;
+                background-color: transparent;
+                border-color: black;
+
+            }
+
+            body {
+                width:1200px;
+                margin: 0 auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="characterInfoContainer">
+
+            <div id="characterName" class="characterTopBar">
+                <p><input type="text"></p>
+                <p>Character Name</p>
+            </div>
+            <div id="characterClass" class="characterTopBar">
+                <select>
+                    <option>Barbarian</option>
+                    <option>Bard</option>
+                    <option>Cleric</option>
+                    <option>Druid</option>
+                    <option>Fighter</option>
+                    <option>Monk</option>
+                    <option>Paladin</option>
+                    <option>Ranger</option>
+                    <option>Rogue</option>
+                    <option>Sorcerer</option>
+                    <option>Warlock</option>
+                    <option>Wizard</option>
+                </select>
+                <p>Character Class</p>
+            </div>
+            <div id="characterLevel" class="characterTopBar">
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                </select>
+                <p>Character Level</p>
+            </div>
+            <div id="characterRace" class="characterTopBar">
+                <p><input type="text"></p>
+                <p>Character Race</p>
+            </div>
+            <div id="characterBackground" class="characterTopBar">
+                <p><input type="text"></p>
+                <p>Character Background</p>
+            </div>
+            <div id="characterAlignment" class="characterTopBar">
+                <p><input type="text"></p>
+                <p>Character Alignment</p>
+            </div>
+        </div>
+
+        <div id="characterStatsContainer">
+            <div id="characterStrength" class="statStyle">
+                <p>Strength</p>
+                <h1>#</h1>
+                <p><input type="number" class="stat"></p>
+            </div>
+            <div id="characterDexterity" class="statStyle">
+                <p>Dexterity</p>
+                <h1>#</h1>
+                <p><input type="number" class="stat"></p>
+            </div>
+            <div id="characterConstitution" class="statStyle">
+                <p>Constitution</p>
+                <h1>#</h1>
+                <p><input type="number" class="stat"></p>
+            </div>
+            <div id="characterIntelligence" class="statStyle">
+                <p>Intelligence</p>
+                <h1>#</h1>
+                <p><input type="number" class="stat"></p>
+            </div>
+            <div id="characterWisdom" class="statStyle">
+                <p>Wisdom</p>
+                <h1>#</h1>
+                <p><input type="number" class="stat"></p>
+            </div>
+            <div id="characterCharisma" class="statStyle">
+                <p>Charisma</p>
+                <h1>#</h1>
+                <p><input type="number" class="stat"></p>
+            </div>
+
+        </div>
+
+        <div id="characterSkillsContainer">
+
+            <div id="characterProf">
+                <h2><input type="number" class="stat"> Proficiency Bonus</h2>
+
+            </div>
+
+            <div id="characterSavingThrows">
+                <p><input type="checkbox"> # Strength</p>
+                <p><input type="checkbox"> # Dexterity</p>
+                <p><input type="checkbox"> # Constitution</p>
+                <p><input type="checkbox"> # Intelligence</p>
+                <p><input type="checkbox"> # Wisdom</p>
+                <p><input type="checkbox"> # Charisma</p>
+
+            </div>
+
+        </div>
+
+    </body>
+    </html>
