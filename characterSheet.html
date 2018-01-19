@@ -10,7 +10,8 @@
                 height: 100px;
                 width: 1200px;
                 margin: 0 auto;
-                background-color:gray;
+                border: 3px black solid;
+                border-radius: 10px;
 
             }
 
@@ -42,9 +43,10 @@
 
                 height: 1000px;
                 width: 170px;
-                Background-color:gray;
-                margin-top: 15px;
-                padding: 5px;
+                border: 3px black solid;
+                border-radius: 30px;
+                margin-top: 10px;
+                margin-left: 10px;
                 float: left;
 
             }
@@ -67,53 +69,83 @@
             #characterSkillsContainer {
                 width: 270px;
                 height: 1000px;
-                Background-color: darkgray;
-                margin-top: 15px;
-                Margin-left:15px;
+                border: 3px black solid;
+                border-radius: 10px;
+                margin-top: 10px;
+                Margin-left:10px;
                 float: left;
 
+            }
+
+            #characterStatsAndSkillsContainer {
+                width: 485px;
+                height: 2000px;
+                border: 0px black solid;
+                border-radius: 10px;
+                margin-top: 10px;
+                Margin-left:10px;
             }
 
             #characterProf {
                 width:250px;
                 height: 50px;
-                Background-color:gray;
-                Margin: 10px auto;
+                border: 3px black solid;
+                border-radius: 10px;
+                Margin: 5px auto;
                 Float: top;
                 text-align:center;
-                line-height: 50px;
             }
 
             #characterSavingThrows {
                 width: 250px;
-                height: 200px;
-                Background-color: gray;
-                Margin: 10px auto;
+                height: 260px;
+                border: 3px black solid;
+                border-radius: 10px;
+                Margin: 5px auto;
+                Float: top;
+            }
+
+            #characterSkills {
+                width: 250px;
+                height: 650px;
+                border: 3px black solid;
+                border-radius: 10px;
+                Margin: 5px auto;
                 Float: top;
             }
 
 
             input {
 
-                border: none;
-                border-bottom: 1px solid #CCC;
                 background-color: transparent;
-                border-color: black;
+                border: none black;
+                border-bottom: 1px solid;
 
             }
 
             select {
 
-                border: none;
-                border-bottom: 1px solid #CCC;
                 background-color: transparent;
-                border-color: black;
+                border: none black;
+                border-bottom: 1px solid;
 
             }
 
             body {
                 width:1200px;
                 margin: 0 auto;
+            }
+
+            p.largerSpace {
+                line-height: 210%;
+            }
+
+            h2.center {
+                text-align:center;
+
+            }
+            h2.height {
+                margin: 5px;
             }
 
         </style>
@@ -179,60 +211,92 @@
                 <p><input type="text"></p>
                 <p>Character Alignment</p>
             </div>
-        </div>
-
-        <div id="characterStatsContainer">
-            <div id="characterStrength" class="statStyle">
-                <p>Strength</p>
-                <h1>#</h1>
-                <p><input type="number" class="stat"></p>
-            </div>
-            <div id="characterDexterity" class="statStyle">
-                <p>Dexterity</p>
-                <h1>#</h1>
-                <p><input type="number" class="stat"></p>
-            </div>
-            <div id="characterConstitution" class="statStyle">
-                <p>Constitution</p>
-                <h1>#</h1>
-                <p><input type="number" class="stat"></p>
-            </div>
-            <div id="characterIntelligence" class="statStyle">
-                <p>Intelligence</p>
-                <h1>#</h1>
-                <p><input type="number" class="stat"></p>
-            </div>
-            <div id="characterWisdom" class="statStyle">
-                <p>Wisdom</p>
-                <h1>#</h1>
-                <p><input type="number" class="stat"></p>
-            </div>
-            <div id="characterCharisma" class="statStyle">
-                <p>Charisma</p>
-                <h1>#</h1>
-                <p><input type="number" class="stat"></p>
-            </div>
 
         </div>
 
-        <div id="characterSkillsContainer">
+        <div id="characterStatsAndSkillsContainer">
 
-            <div id="characterProf">
-                <h2><input type="number" class="stat"> Proficiency Bonus</h2>
+            <div id="characterStatsContainer">
+
+                <div id="characterStrength" class="statStyle">
+                    <p>Strength</p>
+                    <h1>#</h1>
+                    <p><input type="number" class="stat"></p>
+                </div>
+                <div id="characterDexterity" class="statStyle">
+                    <p>Dexterity</p>
+                    <h1>#</h1>
+                    <p><input type="number" class="stat"></p>
+                </div>
+                <div id="characterConstitution" class="statStyle">
+                    <p>Constitution</p>
+                    <h1>#</h1>
+                    <p><input type="number" class="stat"></p>
+                </div>
+                <div id="characterIntelligence" class="statStyle">
+                    <p>Intelligence</p>
+                    <h1>#</h1>
+                    <p><input type="number" class="stat"></p>
+                </div>
+                <div id="characterWisdom" class="statStyle">
+                    <p>Wisdom</p>
+                    <h1>#</h1>
+                    <p><input type="number" class="stat"></p>
+                </div>
+                <div id="characterCharisma" class="statStyle">
+                    <p>Charisma</p>
+                    <h1>#</h1>
+                    <p><input type="number" class="stat"></p>
+                </div>
 
             </div>
 
-            <div id="characterSavingThrows">
-                <p><input type="checkbox"> # Strength</p>
-                <p><input type="checkbox"> # Dexterity</p>
-                <p><input type="checkbox"> # Constitution</p>
-                <p><input type="checkbox"> # Intelligence</p>
-                <p><input type="checkbox"> # Wisdom</p>
-                <p><input type="checkbox"> # Charisma</p>
+            <div id="characterSkillsContainer">
+
+                <div id="characterProf">
+
+                    <h2><input type="number" class="stat"> Proficiency Bonus</h2>
+
+                </div>
+
+                <div id="characterSavingThrows">
+
+                    <h2 class="center height">Saving Throws</h2>
+                    <p class="largerSpace"><input type="checkbox"> # Strength<br>
+                    <input type="checkbox"> # Dexterity<br>
+                    <input type="checkbox"> # Constitution<br>
+                    <input type="checkbox"> # Intelligence<br>
+                    <input type="checkbox"> # Wisdom<br>
+                    <input type="checkbox"> # Charisma</p>
+
+                </div>
+
+                <div id="characterSkills">
+
+                    <h2 class="center height">Skills</h2>
+                    <p class="largerSpace"><input type="checkbox"> # Acrobatic (stat)<br>
+                    <input type="checkbox"> # Animal Handling (Stat)<br>
+                    <input type="checkbox"> # Arcana (stat)<br>
+                    <input type="checkbox"> # Athletics (stat)<br>
+                    <input type="checkbox"> # Deception (stat)<br>
+                    <input type="checkbox"> # History (stat)<br>
+                    <input type="checkbox"> # Insight (stat)<br>
+                    <input type="checkbox"> # Intimidation (stat)<br>
+                    <input type="checkbox"> # Investigation (stat)<br>
+                    <input type="checkbox"> # Medicine (stat)<br>
+                    <input type="checkbox"> # Nature (stat)<br>
+                    <input type="checkbox"> # Perception (stat)<br>
+                    <input type="checkbox"> # Performance (stat)<br>
+                    <input type="checkbox"> # Persuasion (stat)<br>
+                    <input type="checkbox"> # Religion (stat)<br>
+                    <input type="checkbox"> # Slight of Hand (stat)<br>
+                    <input type="checkbox"> # Stealth (stat)<br>
+                    <input type="checkbox"> # Survival (stat)</p>
+
+                </div>
 
             </div>
 
         </div>
-
     </body>
     </html>
