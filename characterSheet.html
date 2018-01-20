@@ -35,7 +35,6 @@
             #characterStatsContainer {
                 height: auto;
                 width: auto;
-                background-color:grey;
                 float: left;
 
             }
@@ -55,7 +54,6 @@
             #characterSkillsContainer {
                 width: auto;
                 height: auto;
-                background-color: grey;
                 margin: 0 0 0 10px;
                 float: left;
 
@@ -64,7 +62,6 @@
             #characterStatsAndSkillsContainer {
                 width: 400px;
                 height: 2000px;
-                background-color:darkgray;
                 margin-top: 10px;
                 float:left
                          }
@@ -72,7 +69,6 @@
             #characterArmorAndHPContainer {
                 width: 400px;
                 height: 2000px;
-                background-color:dimgray;
                 margin-top: 10px;
                 float:left;
             }
@@ -80,7 +76,6 @@
             #characterTraitsContainer {
                 width: 400px;
                 height: 2000px;
-                background-color:lightslategrey;
                 margin-top: 10px;
                 float:left;
             }
@@ -164,28 +159,35 @@
 
             #traits {
                 width: 380px;
-                height: 100px;
+                height: auto;
                 float: left;
                 margin: 0 0 0 10px;
             }
 
             #ideals {
                 width: 380px;
-                height: 100px;
+                height: auto;
                 float: left;
                 margin: 10px 0 0 10px;
             }
 
             #bonds {
                 width: 380px;
-                height: 100px;
+                height: auto;
                 float: left;
                 margin: 10px 0 0 10px;
             }
 
             #flaws {
                 width: 380px;
-                height: 100px;
+                height: auto;
+                float: left;
+                margin: 10px 0 0 10px;
+            }
+
+            #features {
+                width: 380px;
+                height: auto;
                 float: left;
                 margin: 10px 0 0 10px;
             }
@@ -226,6 +228,34 @@
             }
             h2.height {
                 margin: 5px;
+            }
+
+            p.center {
+                text-align:center;
+            }
+
+            p.right {
+                text-align:right;
+            }
+
+            p.bold {
+                font-weight:bold;
+            }
+
+            .noMargin {
+                margin:0;
+            }
+
+            textarea {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 5px;
+                resize:vertical;
+            }
+
+            td {
+                text-align:center;
             }
 
         </style>
@@ -386,35 +416,93 @@
         </div>
 
         <div id="characterArmorAndHPContainer">
+
             <div id="armorClass" class="border">
+
+                <p class="center">Armor Class<br>
+                <input type="number" class="stat"></p>
 
             </div>
 
             <div id="initiative" class="border">
 
+                <p class="center">Initiative<br>
+                <input type="number" class="stat"></p>
+
             </div>
 
             <div id="speed" class="border">
 
+                <p class="center">Speed<br>
+                <input type="number" class="stat"></p>
+
             </div>
 
             <div id="currentHp" class="border">
+                <p class="center bold"><input type="number" class="stat"><br>
+                 Max HP <br>
+                <input type="number" class="stat"><br>
+                 Current HP</p>
 
             </div>
 
             <div id="tempHp" class="border">
 
+                <p class="center bold"><input type="number" class="stat"><br>
+                Temp HP</p>
+
             </div>
 
             <div id="hitDie" class="border">
 
+                <p class="center">
+                <input type="number" class="stat"><br>
+                Total<br>
+                <input type="number" class="stat"><br>
+                Hit Dice</p>
+
             </div>
 
             <div id="deathSaves" class="border">
+                <p class="right">Successes <input type="checkbox"><input type="checkbox"><input type="checkbox"><br>
+                Failures <input type="checkbox"><input type="checkbox"><input type="checkbox"></p>
+                <p class="center bold">Death Saves</p>
 
             </div>
 
             <div id="equipment" class="border">
+                <table style="width:100%">
+                    <tr>
+                        <th>#</th>
+                        <th>Item Name</th>
+                        <th>Weight</th>
+                    </tr>
+                    <tr>
+                        <td><input type="number" class="stat"></td>
+                        <td><input type="text"></td>
+                        <td><input type="number" class="stat"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" class="stat"></td>
+                        <td><input type="text"></td>
+                        <td><input type="number" class="stat"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" class="stat"></td>
+                        <td><input type="text"></td>
+                        <td><input type="number" class="stat"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" class="stat"></td>
+                        <td><input type="text"></td>
+                        <td><input type="number" class="stat"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" class="stat"></td>
+                        <td><input type="text"></td>
+                        <td><input type="number" class="stat"></td>
+                    </tr>
+                </table>
 
             </div>
 
@@ -423,17 +511,36 @@
         <div id="characterTraitsContainer">
             <div id="traits" class="border">
 
+                <p class="center bold noMargin">Personality Traits</p>
+                <textarea name="traits" rows="4" cols="50"></textarea>
+
             </div>
 
             <div id="ideals" class="border">
+
+                <p class="center bold noMargin">Ideals</p>
+                <textarea name="traits" rows="4" cols="50"></textarea>
 
             </div>
 
             <div id="bonds" class="border">
 
+                <p class="center bold noMargin">Bonds</p>
+                <textarea name="traits" rows="4" cols="50"></textarea>
+
             </div>
 
             <div id="flaws" class="border">
+
+                <p class="center bold noMargin">Flaws</p>
+                <textarea name="traits" rows="4" cols="50"></textarea>
+
+            </div>
+
+            <div id="features" class="border">
+
+                <p class="center bold noMargin">Features</p>
+                <textarea name="traits" rows="20" cols="50"></textarea>
 
             </div>
 
