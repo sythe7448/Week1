@@ -6,17 +6,12 @@
         <style type="text/css">
 
             #characterInfoContainer {
-
                 height: 100px;
                 width: 1200px;
-                margin: 0 auto;
-                border: 3px black solid;
-                border-radius: 10px;
 
             }
 
             .characterTopBar {
-
                 text-align: center;
                 width: 200px;
                 float: left;
@@ -29,36 +24,27 @@
             }
 
             #characterClass {
-
                 margin-top: 17px;
 
             }
 
             #characterLevel {
-
                 margin-top: 17px;
             }
 
             #characterStatsContainer {
-
-                height: 1000px;
-                width: 170px;
-                border: 3px black solid;
-                border-radius: 30px;
-                margin-top: 10px;
-                margin-left: 10px;
+                height: auto;
+                width: auto;
+                background-color:grey;
                 float: left;
 
             }
 
             .statStyle {
-
-                width: 150px;
-                height: 150px;
-                border: 3px black solid;
-                border-radius: 10%;
+                width: 125px;
+                height: 125px;
                 text-align: center;
-                margin: 9px auto;
+                margin: 0 0 10px 0;
 
             }
 
@@ -67,53 +53,147 @@
             }
 
             #characterSkillsContainer {
-                width: 270px;
-                height: 1000px;
-                border: 3px black solid;
-                border-radius: 10px;
-                margin-top: 10px;
-                Margin-left:10px;
+                width: auto;
+                height: auto;
+                background-color: grey;
+                margin: 0 0 0 10px;
                 float: left;
 
             }
 
             #characterStatsAndSkillsContainer {
-                width: 485px;
+                width: 400px;
                 height: 2000px;
-                border: 0px black solid;
-                border-radius: 10px;
+                background-color:darkgray;
                 margin-top: 10px;
-                Margin-left:10px;
+                float:left
+                         }
+
+            #characterArmorAndHPContainer {
+                width: 400px;
+                height: 2000px;
+                background-color:dimgray;
+                margin-top: 10px;
+                float:left;
+            }
+
+            #characterTraitsContainer {
+                width: 400px;
+                height: 2000px;
+                background-color:lightslategrey;
+                margin-top: 10px;
+                float:left;
             }
 
             #characterProf {
-                width:250px;
-                height: 50px;
-                border: 3px black solid;
-                border-radius: 10px;
-                Margin: 5px auto;
+                width: 260px;
+                height: auto;
+                margin: 0 0 10px 0;
                 Float: top;
                 text-align:center;
             }
 
             #characterSavingThrows {
-                width: 250px;
-                height: 260px;
-                border: 3px black solid;
-                border-radius: 10px;
-                Margin: 5px auto;
+                width: 260px;
+                height: auto;
+                margin: 0 0 10px 0;
                 Float: top;
             }
 
             #characterSkills {
-                width: 250px;
-                height: 650px;
-                border: 3px black solid;
-                border-radius: 10px;
-                Margin: 5px auto;
+                width: 260px;
+                height: auto;
+                margin: 0 0 10px 0;
                 Float: top;
             }
 
+            #armorClass {
+                width: 117px;
+                height: 70px;
+                float: left;
+                Margin: 0 0 0 10px;
+            }
+
+            #initiative {
+                width: 117px;
+                height: 70px;
+                float: left;
+                Margin: 0 0 0 10px;
+            }
+            #speed {
+                width: 117px;
+                height: 70px;
+                float: left;
+                Margin: 0 0 0 10px;
+            }
+
+            #currentHp {
+                width: 380px;
+                height: 100px;
+                float:left;
+                margin: 10px 0 0 10px;
+            }
+
+            #tempHp {
+                width: 380px;
+                height: 100px;
+                float: left;
+                margin: 10px 0 0 10px;
+            }
+
+            #hitDie {
+                width: 185px;
+                height: 100px;
+                float: left;
+                margin: 10px 0 0 10px;
+            }
+
+            #deathSaves {
+                width: 181px;
+                height: 100px;
+                float: left;
+                margin: 10px 0 0 10px;
+            }
+
+            #equipment {
+                width: 380px;
+                height: 500px;
+                float: left;
+                margin: 10px 0 0 10px;
+            }
+
+            #traits {
+                width: 380px;
+                height: 100px;
+                float: left;
+                margin: 0 0 0 10px;
+            }
+
+            #ideals {
+                width: 380px;
+                height: 100px;
+                float: left;
+                margin: 10px 0 0 10px;
+            }
+
+            #bonds {
+                width: 380px;
+                height: 100px;
+                float: left;
+                margin: 10px 0 0 10px;
+            }
+
+            #flaws {
+                width: 380px;
+                height: 100px;
+                float: left;
+                margin: 10px 0 0 10px;
+            }
+
+            .border {
+                border: 1px black solid;
+                border-radius: 10px;
+            }
 
             input {
 
@@ -137,7 +217,7 @@
             }
 
             p.largerSpace {
-                line-height: 210%;
+                line-height: 160%;
             }
 
             h2.center {
@@ -151,7 +231,7 @@
         </style>
     </head>
     <body>
-        <div id="characterInfoContainer">
+        <div id="characterInfoContainer" class="border">
 
             <div id="characterName" class="characterTopBar">
                 <p><input type="text"></p>
@@ -218,48 +298,54 @@
 
             <div id="characterStatsContainer">
 
-                <div id="characterStrength" class="statStyle">
-                    <p>Strength</p>
-                    <h1>#</h1>
-                    <p><input type="number" class="stat"></p>
+                <div id="characterStrength" class="statStyle border">
+                    <p>Strength<br>
+                    <br>
+                    #<br>
+                    <input type="number" class="stat"></p>
                 </div>
-                <div id="characterDexterity" class="statStyle">
-                    <p>Dexterity</p>
-                    <h1>#</h1>
-                    <p><input type="number" class="stat"></p>
+                <div id="characterDexterity" class="statStyle border">
+                    <p>Dexterity<br>
+                    <br>
+                    #<br>
+                    <input type="number" class="stat"></p>
                 </div>
-                <div id="characterConstitution" class="statStyle">
-                    <p>Constitution</p>
-                    <h1>#</h1>
-                    <p><input type="number" class="stat"></p>
+                <div id="characterConstitution" class="statStyle border">
+                    <p>Constitution<br>
+                    <br>
+                    #<br>
+                    <input type="number" class="stat"></p>
                 </div>
-                <div id="characterIntelligence" class="statStyle">
-                    <p>Intelligence</p>
-                    <h1>#</h1>
-                    <p><input type="number" class="stat"></p>
+                <div id="characterIntelligence" class="statStyle border">
+                    <p>Intelligence<br>
+                    <br>
+                    #<br>
+                    <input type="number" class="stat"></p>
                 </div>
-                <div id="characterWisdom" class="statStyle">
-                    <p>Wisdom</p>
-                    <h1>#</h1>
-                    <p><input type="number" class="stat"></p>
+                <div id="characterWisdom" class="statStyle border">
+                    <p>Wisdom<br>
+                    <br>
+                    #<br>
+                    <input type="number" class="stat"></p>
                 </div>
-                <div id="characterCharisma" class="statStyle">
-                    <p>Charisma</p>
-                    <h1>#</h1>
-                    <p><input type="number" class="stat"></p>
+                <div id="characterCharisma" class="statStyle border">
+                    <p>Charisma<br>
+                    <br>
+                    #<br>
+                    <input type="number" class="stat"></p>
                 </div>
 
             </div>
 
             <div id="characterSkillsContainer">
 
-                <div id="characterProf">
+                <div id="characterProf" class="border">
 
                     <h2><input type="number" class="stat"> Proficiency Bonus</h2>
 
                 </div>
 
-                <div id="characterSavingThrows">
+                <div id="characterSavingThrows" class="border">
 
                     <h2 class="center height">Saving Throws</h2>
                     <p class="largerSpace"><input type="checkbox"> # Strength<br>
@@ -271,10 +357,10 @@
 
                 </div>
 
-                <div id="characterSkills">
+                <div id="characterSkills" class="border">
 
                     <h2 class="center height">Skills</h2>
-                    <p class="largerSpace"><input type="checkbox"> # Acrobatic (stat)<br>
+                    <p class="largerSpace"><input type="checkbox"> # Acrobatics (stat)<br>
                     <input type="checkbox"> # Animal Handling (Stat)<br>
                     <input type="checkbox"> # Arcana (stat)<br>
                     <input type="checkbox"> # Athletics (stat)<br>
@@ -294,6 +380,60 @@
                     <input type="checkbox"> # Survival (stat)</p>
 
                 </div>
+
+            </div>
+
+        </div>
+
+        <div id="characterArmorAndHPContainer">
+            <div id="armorClass" class="border">
+
+            </div>
+
+            <div id="initiative" class="border">
+
+            </div>
+
+            <div id="speed" class="border">
+
+            </div>
+
+            <div id="currentHp" class="border">
+
+            </div>
+
+            <div id="tempHp" class="border">
+
+            </div>
+
+            <div id="hitDie" class="border">
+
+            </div>
+
+            <div id="deathSaves" class="border">
+
+            </div>
+
+            <div id="equipment" class="border">
+
+            </div>
+
+        </div>
+
+        <div id="characterTraitsContainer">
+            <div id="traits" class="border">
+
+            </div>
+
+            <div id="ideals" class="border">
+
+            </div>
+
+            <div id="bonds" class="border">
+
+            </div>
+
+            <div id="flaws" class="border">
 
             </div>
 
